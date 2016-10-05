@@ -1,0 +1,26 @@
+
+
+p {margin: auto;
+	height: 150px;
+	border: 6px solid white;
+}
+
+.pink {
+	background-color: #F5C6D6;
+}
+
+.hot {
+	background-color: #EE2E84;
+}
+
+.blue {
+	background-color: #85CFD8;
+}
+
+.green {
+	background-color: #8DC63F;
+}
+
+.orange {
+	background-color: #E76E34;
+}

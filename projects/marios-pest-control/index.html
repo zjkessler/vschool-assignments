@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mario's Pest Control</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="contatiner-fluid">
+	<div class="container">
+		<header class="row">
+			<h1>Mario's Pest Contol</h1>
+
+		</header>
+
+		<div class="row">
+			<div id="goombas" class="col-sm-4">
+				<figure><img src="img/goomba.jpg" class="img-thumbnail img-responsive center-block">
+					<figcaption>
+						<h2>Goombas: 5 Coins</h2>
+						<p class="center-block" id="counter1">12</p>
+						<p class="center-block" id="cost1"></p>
+						<input class="btn btn-primary" id="buttonPlus" type="button" value="+" onclick="addGoomba()">
+						<input class="btn btn-primary" id="buttonMinus" type="button" value="-" onclick="minusGoomba()">
+					</figcaption>
+				</figure>
+			</div>
+			<div id="bobombs" class="col-sm-4">
+				<figure><img src="img/Bob_Omb.png" class="img-thumbnail img-responsive center-block">
+					<figcaption>
+						<h2>Bob'ombs: 7 Coins</h2>
+						<p class="center-block" id="counter2">8</p>
+						<p class="center-block" id="cost2"></p>
+						<input class="btn btn-primary" id="buttonPlus" type="button" value="+" onclick="addBomb()">
+						<input class="btn btn-primary" id="buttonMinus" type="button" value="-" onclick="minusBomb()">
+					</figcaption>
+				</figure>
+			</div>
+			<div id="cheepcheeps" class="col-sm-4">
+				<figure><img src="img/cheep.jpg" class="img-thumbnail img-responsive center-block">
+					<figcaption>
+						<h2>CheepCheeps: 11 Coins</h2>
+						<p class="center-block" id="counter3">5</p>
+						<p class="center-block" id="cost3"></p>
+						<input class="btn btn-primary" id="buttonPlus" type="button" value="+" onclick="addCheep()">
+						<input class="btn btn-primary" id="buttonMinus" type="button" value="-" onclick="minusCheep()">
+					</figcaption>
+				</figure>
+			</div>
+
+		</div>
+		<div id="total" class="row">
+			<div class="col-sm-12 ">
+				<h2 class="center-block">Grand Total: </h2>
+				<h3 class="center-block" id="gtotal">0</h3><img url="im">
+			</div>
+		</div>
+		<footer class="col-sm-12">
+			<p id="contact" class="center-block">CONTACT US!
+				<br>email: <a>mario@MPControl.com</a>
+				<br><a>MarioPestControl.com</a>
+				<br>1234 Some Street
+				<br>Anytown, NYC 24895
+			</p>
+		</footer>
+	</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+
+</html>

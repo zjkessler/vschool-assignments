@@ -1,0 +1,51 @@
+header,
+footer {
+	background-color: gold
+}
+
+@font-face {
+	font-family: mynewfont;
+	src: url('SuperMario256.ttf');
+}
+
+h1,
+h2 {
+	color: red;
+	font-family: mynewfont;
+	font-weight: 300;
+}
+
+#luigi {
+	padding: 15px;
+}
+
+#mushroom {
+	max-height: 50px;
+	float: right;
+	padding: 5px;
+}
+
+.banner {
+	background-color: red;
+}
+h1{
+	margin-left: 10px;
+}
+h2 {
+	text-align: center;
+}
+
+p {
+
+	max-width: 300px;
+	font-family: verdana;
+	font-weight: 600;
+	color: red;
+	text-align: center;
+	font-size: .8em;
+	margin: auto;
+}
+
+.img-responsive {
+	margin: 0 auto;
+}

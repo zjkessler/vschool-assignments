@@ -1,0 +1,31 @@
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+th,
+tr,
+td {
+	border: 1px dashed goldenrod;
+}
+
+table {
+	padding: 10%;
+}
+
+th,
+.th {
+	background-color: crimson;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+tr,
+td {
+	padding: 3px;
+}
+
+tr:hover,
+td:hover {
+	background-color: chartreuse
+}

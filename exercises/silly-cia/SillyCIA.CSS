@@ -1,0 +1,50 @@
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: linen;
+}
+
+h1,h2{
+    text-align: center;
+    color: darkgreen;
+    line-height: 1.2;
+    font-family: georgia;
+}
+
+h2{
+    color: black;
+    font-size: 1em;
+}
+
+p{
+    line-height: 25px;
+    text-indent: 25px;
+}
+
+ul{
+    margin-left: 60px;
+}
+
+img{
+    float: left;
+    margin: 10px 10px;
+    clear: left;
+}
+
+.upper{
+    text-transform: uppercase;
+}
+
+a:link{
+    text-decoration: none;
+    margin: 40px;
+    
+}
+
+a:hover {
+    color: orangered;
+    text-decoration: underline;
+}
+
+div{
+    float: left;
+}

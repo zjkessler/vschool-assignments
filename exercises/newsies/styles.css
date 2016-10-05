@@ -1,0 +1,34 @@
+
+body{
+	background-color: antiquewhite;
+	font-family: Courier, helvetica, sans-serif;
+}
+p {
+    display: inline-block;
+    width: 30%;
+    float: left;
+	
+}
+
+img {
+    display: block;
+    float: auto ;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+a:link:hover {
+    color: firebrick;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+div {
+	max-width: 600px;
+}
+h1{
+	text-align: center;
+	max-width: 600px;
+}

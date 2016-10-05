@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!--	<link rel="stylesheet" href="styles.css">-->
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="add col-xs-6 col-md-4">
+				<input type="number" id="addition1" class="bg-success" placeholder="enter a number">
+				<p>+</p>
+				<input type="number" id="addition2" placeholder="enter another number">
+				<button class="btn btn-primary" type="button" onclick="add()">Equals</button>
+				<p id="addAnswer"></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="sub col-xs-6 col-md-4">
+				<input type="number" id="subtract1" placeholder="enter a number">
+				<p>-</p>
+				<input type="number" id="subtract2" placeholder="enter another number">
+				<button class="btn btn-primary" type="button" onclick="sub()">Equals
+				</button>
+				<p id="subAnswer"></p>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="multi col-xs-6 col-md-4">
+				<input type="number" id="multiply1" placeholder="enter a number">
+				<p>*</p>
+				<input type="number" id="multiply2" placeholder="enter another number">
+				<button class="btn btn-primary" type="button" onclick="multi()">Equals</button>
+				<p id="multiAnswer"></p>
+			</div>
+		</div>
+	</div>
+	<button tclass="btn btn-primary" type="submit" onclick="cleared()">Clear</button>
+	<script src="script.js"></script>
+	</div>
+</body>

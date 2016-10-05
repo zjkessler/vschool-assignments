@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>forms</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+
+			<form action="" name="myForm" class="form-group text-center">
+				<div>
+					<label for="first-name">First Name: </label>
+					<input id="first-name" type="text" value="" name="fname">
+				</div>
+				<div>
+					<label for="last-name">Last Name: </label>
+					<input id="last-name" type="text" value="" name="lname">
+				</div>
+				<div>
+					<label for="age">Age: </label>
+					<input type="number" id="age"  value="" name="age">
+				</div>
+
+				<div>
+					<label for="male">Male: </label>
+					<input type="radio" id="male" name="gender" value="male">
+					<label for="female">Female: </label>
+					<input type="radio" id="female" name="gender" value="female">
+				</div>
+				<div>
+					<label for="location">Location</label>
+					<select name="location" id="location" placeholder="-select">
+						<option value="select">-select-</option>
+						<option value="Portland">Portland</option>
+						<option value="New York City">New York City</option>
+						<option value="New Orleans">New Orleans</option>
+					</select>
+				</div>
+				<div>
+					<label for="diet">Diet Restrictions: </label>
+					<br>
+					<input type="checkbox" name="diet" id="gf" value="Gluten-Free">Gluten-Free
+					<input type="checkbox" name="diet" id="paleo" value="Paleo">Paleo
+					<input type="checkbox" name="diet" id="vegitarian" value="Vegitarian">Vegitarian
+					<input type="checkbox" name="diet" id="vegan" value="Vegan">Vegan
+				</div>
+
+				<div>
+					<button class="btn btn-primary" id="submit" type="button">Submit</button>
+					<button class="btn btn-primary" id="reset" type="reset">Reset</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="script1.js"></script>
+</body>
+
+</html>

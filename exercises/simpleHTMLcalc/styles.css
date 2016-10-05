@@ -1,0 +1,40 @@
+/*
+body {
+	font-weight: 300;
+	font-size: 24px;
+*/
+}
+
+div {
+	min-width: 800px;
+	width: 75%;
+	padding: 10px;
+}
+
+button {
+	font-size: 18px;
+	padding: 10px;
+	background-color: cornflowerblue;
+	border-radius: 8px;
+}
+
+button:hover {
+	background-color: crimson;
+	padding: 15px;
+	border-radius: 8px;
+	color: aliceblue;
+}
+
+input {
+	font-size: 18px;
+	margin: 10px;
+	background-color: beige;
+	padding: 10px;
+	width: 25%;
+}
+p{
+	min-height: inherit;
+	min-width: 200px;
+	display: inline;
+	
+}

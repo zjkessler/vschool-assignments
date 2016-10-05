@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box; 
+    font-size: 0px;
+}
+body {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+}
+
+nav {
+	float:left;
+	width: 100px;
+	max-height: 100%;
+	background-color: aqua;
+}
+
+article {
+	margin: 10px;
+	background-color: antiquewhite;
+}
+
+footer {
+	position: static;
+	background-color: blueviolet;
+	float: right;
+}
+
+img {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+section {
+	position: relative;
+	min-width: 1000px;
+}
+
+ul {
+	
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	height: 100%;
+	position: relative;
+}
+
+li a {
+	display: block;
+	width: 60px;
+}
+header{
+	border: 12px;
+	border-style: double;
+	border-color: blanchedalmond;
+	text-align: center;
+	background: linear-gradient(to bottom right, red, yellow); 
+}

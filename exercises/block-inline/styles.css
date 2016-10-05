@@ -1,0 +1,18 @@
+span {
+    border: 1px dashed blue;
+}
+
+p {
+    display: inline-block;
+    width: 30%;
+}
+
+li {
+    border: 1px dashed blue;
+}
+div {
+    border: 1px dashed red;
+    width: 300px;
+    display: inline-block;
+
+}

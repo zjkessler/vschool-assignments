@@ -1,0 +1,49 @@
+body{
+	background-color: #111111;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+h1{
+	/*background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRlVKEpF2eH2Tp4hm_OwyhnDvbl2G9p7T2yX6M36zqh0QTrXkopkg);
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #E2E80F;
+	text-align: center;
+	font-size: 400%;
+	font-variant: small-caps;
+	margin: auto;
+	border-style: groove;
+	border-width: thick;
+	border-color: #E2E80F;
+	height: 400px;*/
+}
+p{
+	color: #eeeeee;
+	font-family: ;
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+.credits {
+	color: #49DAFF;
+	text-decoration: underline;
+	text-decoration-color: #49DAFF;
+	cursor: grab;
+}
+span.credits:hover {
+	color: orangered;
+	cursor: pointer;
+	
+	;
+}
+#film-description {
+	font-style: italic;
+	font-size: 1em;
+}
+h1:hover {
+ 	font-weight: 
+	opacity: .05;
+}
+img{
+	display: block;
+    margin: auto;
+    width: 50%;
+}
