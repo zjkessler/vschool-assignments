@@ -9,7 +9,8 @@
 </head>
 
 <body>
-
+	<div id="leftborder"></div>
+	<div id="rightborder"></div>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -31,26 +32,38 @@
 		</div>
 	</nav>
 
+
 	<div class="jumbotron hidden-sm hidden-xs text-center">
 		<header>
 			<image src="https://placekitten.com/700/100" class="center" id="headpic"></image>
 			<h1>kitten! <small>so many kittens</small></h1></header>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4">
-
-			</div>
-			<div class="col-sm-8">
-
+	<div class="container-fluid">
+		<div class="container-fluid space box" id="top">
+			<div class="row bg-grey ">
+				<div class="col-sm-2">
+					<article>
+						<h4><span class="glyphicon glyphicon-map-marker"></span>Located At: </h4>
+						<p>350 s 200 e
+							<br> Salt Lake City, Utah</p>
+					</article>
+				</div>
+				<div class="col-sm-6 center-block" id="map">
+				</div>
 			</div>
 		</div>
 	</div>
+	<footer class="container-fluid text-center">
+		<div>
+			<p id="bottom">Way to Many Kittens, please help!<span class="glyphicon glyphicon-asterisk"></span><a href="index.html">www.kittens.com</a></p>
+		</div>
+	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-		< script src = "script.js" >
-	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="script.js"></script>
+
 </body>
 
 </html>

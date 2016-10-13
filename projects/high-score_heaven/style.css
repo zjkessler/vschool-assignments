@@ -1,0 +1,42 @@
+body {
+	text-align: center;
+	background-image: url("photo-1469032923574-4f1413034019.jpg");
+	background-size: cover;
+}
+
+h1,
+i,
+label,
+td {
+	text-shadow: 0px 0px 7px white;
+}
+
+#main {
+	width: 800px;
+	margin: auto;
+}
+
+header {
+	text-decoration: underline;
+}
+
+input {
+	padding: 10px;
+}
+
+table {
+	width: %;
+	margin: auto;
+	font-size: 1.2em;
+}
+
+label {
+	padding: 10px;
+}
+
+@media (min-width:760px) {
+	inputs {
+		position: relative;
+		left: 0;
+	}
+}

@@ -1,0 +1,111 @@
+body.darkSetting {
+	background-image: url("img/background.jpg");
+	background-position: center;
+	background-size: cover;
+	font-family: Verdana;
+}
+
+header {
+	background-image: url("img/header.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 300px;
+	text-align: center;
+}
+
+#total {
+	background-image: url("img/465967.jpg");
+	background-position: center top;
+	background-size: cover;
+	height: 175px;
+	text-align: center;
+}
+
+h1.darkSetting {
+	text-shadow: 4px 4px white;
+	text-transform: capitalize;
+	font-size: 6em;
+}
+
+h2.darkSetting {
+	font-size: 1.5em;
+	text-align: center;
+	width: auto;
+}
+
+img {
+	display: block;
+	max-height: 200px;
+	max-width: 50px;
+}
+
+button {
+	object-position: right;
+}
+
+figure {
+	object-position: center;
+	max-width: 400px;
+}
+
+figcaption {
+	background: inherit;
+	text-align: center;
+}
+
+p.darkSetting {
+	padding: 1%;
+	background-color: inherit;
+	width: auto;
+	text-align: center;
+	min-width: 200px;
+}
+
+p.contact,
+a {
+	color: azure;
+	text-decoration: none;
+	text-align: center;
+	padding: 1%;
+	width: inherit;
+	min-width: 200px;
+}
+
+h3 {
+	height: 25%;
+	width: 25%;
+	font-weight: 800;
+	font-size: 3em;
+	color: white;
+}
+
+#counter1,
+#counter2,
+#counter3 {
+	font-size: 2em;
+}
+
+#cost1,
+#cost2,
+#cost3 {
+	background: inherit;
+	font-weight: 800;
+	font-size: 1em;
+	border: none;
+}
+
+body {
+	background-image: url('dbg.jpg');
+}
+
+p,
+h3,
+h2 {
+	background: inherit;
+	color: azure;
+	text-shadow: none;
+	text-align: center;
+	padding: 1%;
+	min-width: 200px;
+	width: auto;
+}

@@ -1,0 +1,58 @@
+{
+	"appetizers": [
+		{
+			"name": "Buffalo Wings",
+			"ingredients": ["Chicken Wings", "Blue Cheese Dressing", "Celery", "Carrots"],
+			"description": "Our very own classic wings in Buffalo Sauce"
+		},
+		{
+			"name": "Onion Rings",
+			"ingredients": ["onion rings", "ranch dressing", "blue cheese dressing"],
+			"description": "deep fried onion rings with a side of dipping sauce"
+		}
+	],
+	"cold sandwiches": [
+		{
+			"name": "Ham and Swiss",
+			"ingredients": ["ham", "swiss cheese", "hoagie roll", "mayo", "mustard", "tomato"],
+			"description": "basic ass ham and swiss"
+		}, {
+			"name": "Italian",
+			"ingredients": ["genoa salami", "capicolla ham", "mozzarella", "focaccia roll", "olive oil", "vinegar", "tomato", "red onion"],
+			"description": "italian cold cuts with oil and vinegar on a fresh foccacia roll"
+		}
+	],
+	"hot sandwhiches": [
+		{
+			"name": "Turkey Swiss",
+			"ingredients": ["turkey", "swiss cheese", "hoagie roll", "ranch", "onion", "tomato"],
+			"description": "oven roasted turkey and swiss"
+		}, {
+			"name": "Mesquite Chicken",
+			"ingredients": ["marinated chicken", "cheddar cheese", "hoagie roll", "ranch", "onion", "tomato"],
+			"description": "our signiture sandwhich"
+		}
+	],
+	"desserts": [
+		{
+			"name": "brownie",
+			"ingredients": ["chocolate", "more chocolate"],
+			"description": "its a brownie, what do you want?"
+		}, {
+			"name": "Oatmeal Cookie",
+			"ingredients": ["oatmeal", "cookie"],
+			"description": "what it says"
+		}
+	],
+	"drinks": [
+		{
+			"name": "coffee",
+			"ingredients": ["caffine"],
+			"description": "the best"
+		}, {
+			"name": "tea",
+			"ingredients": ["leaves", "and stuff"],
+			"description": "leaves and stuff"
+		}
+	]
+}

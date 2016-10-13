@@ -9,7 +9,8 @@
 </head>
 
 <body>
-
+	<div id="leftborder"></div>
+	<div id="rightborder"></div>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -36,35 +37,41 @@
 			<image src="https://placekitten.com/700/100" class="center" id="headpic"></image>
 			<h1>kitten! <small>so many kittens</small></h1></header>
 	</div>
-
-	<div class="container-fluid bg-grey" id="top">
-		<h2 class="text-center">CONTACT</h2>
-		<div class="row">
-			<div class="col-sm-5">
-				<p>Contact us and we'll get back to you within 24 hours.</p>
-				<p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-				<p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-				<p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-			</div>
-			<div class="col-sm-7">
-				<div class="row">
-					<div class="col-sm-6 form-group">
-						<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-					</div>
-					<div class="col-sm-6 form-group">
-						<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-					</div>
+	<div class="container-fluid">
+		<div class="container-fluid bg-grey space box" id="top">
+			<h2 class="text-center">CONTACT</h2>
+			<div class="row">
+				<div class="col-sm-5">
+					<p>Contact us and we'll get back to you within 24 hours.</p>
+					<p><span class="glyphicon glyphicon-map-marker"></span> Salt lake City, UT</p>
+					<p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+					<p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
 				</div>
-				<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-				<br>
-				<div class="row">
-					<div class="col-sm-12 form-group">
-						<button class="btn btn-default pull-right" type="submit">Send</button>
+				<div class="col-sm-7">
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+						</div>
+						<div class="col-sm-6 form-group">
+							<input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+						</div>
+					</div>
+					<textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+					<br>
+					<div class="row">
+						<div class="col-sm-12 form-group">
+							<button class="btn btn-default pull-right" type="submit">Send</button>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<footer class="container-fluid text-center">
+		<div>
+			<p id="bottom">Way to Many Kittens, please help!<span class="glyphicon glyphicon-asterisk"></span><a href="index.html">www.kittens.com</a></p>
+		</div>
+	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 	</script>

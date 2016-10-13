@@ -1,0 +1,1 @@
+Choose a past web-based exercise or project (not a command-line project) and spice it up with some CSS transitions and/or animations. Just try not to go overboard, as it can make your site a lot tackier.

@@ -1,0 +1,59 @@
+p {
+	margin: auto;
+	height: 150px;
+	border: 6px solid white;
+}
+
+.pink {
+	background-color: #F5C6D6;
+}
+
+.hot {
+	background-color: #EE2E84;
+}
+
+.blue {
+	background-color: #85CFD8;
+}
+
+.green {
+	background-color: #8DC63F;
+}
+
+.orange {
+	background-color: #E76E34;
+}
+
+.hot:hover,
+.pink:hover,
+.blue:hover,
+.green:hover,
+.orange:hover {
+	border-radius: 50%;
+	box-shadow: 0 10px 10px 10px darkgrey;
+	border: none;
+	height: 400px;
+	width: 35%;
+	z-index: 1000;
+	position: absolute;
+	margin: ;
+	right: ;
+	transform: rotateY(360deg);
+}
+
+.row {
+	position: relative;
+}
+
+.hot,
+.pink,
+.blue,
+.green,
+.orange {
+	transition: all .6s ease-in .1s, transform 1s;
+	position: relative;
+}
+
+.container {
+	position: ;
+}
