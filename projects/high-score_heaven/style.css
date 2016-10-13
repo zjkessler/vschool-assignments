@@ -1,19 +1,38 @@
-body {
-	text-align: center;
-	background-image: url("photo-1469032923574-4f1413034019.jpg");
-	background-size: cover;
+@font-face {
+	font-family: 'halo';
+	src: url('halo3.ttf');
 }
 
+@media (min-width:760px) {
+	inputs {
+		position: relative;
+		left: 0;
+	}
+}
+
+body {
+	background-image: url("photo-1469032923574-4f1413034019.jpg");
+	background-size: cover;
+	text-align: center;
+}
+
+button {
+	font-size: 4em;
+}
+
+button,
 h1,
 i,
 label,
 td {
-	text-shadow: 0px 0px 7px white;
+	font-family: 'halo';
+	font-size: 2em;
+	font-weight: 600;
+	text-shadow: 0px 0px 20px white;
 }
 
-#main {
-	width: 800px;
-	margin: auto;
+h1 {
+	font-size: 4em;
 }
 
 header {
@@ -24,19 +43,17 @@ input {
 	padding: 10px;
 }
 
+label {
+	padding: 10px;
+}
+
 table {
 	width: %;
 	margin: auto;
 	font-size: 1.2em;
 }
 
-label {
-	padding: 10px;
-}
-
-@media (min-width:760px) {
-	inputs {
-		position: relative;
-		left: 0;
-	}
+#main {
+	width: 800px;
+	margin: auto;
 }
