@@ -1,0 +1,256 @@
+@font-face {
+	font-family: 'Bebas Thin';
+	src: url('BNT.otf');
+}
+
+@font-face {
+	font-family: 'Bebas';
+	src: url('BNR.ttf');
+}
+
+a {
+	color: black;
+}
+
+a:link {
+	text-decoration: none;
+	font-size: .8em;
+	color: darkgrey;
+	letter-spacing: 1px
+}
+
+article {
+	max-width: 600px;
+}
+
+aside {
+	margin: px;
+}
+
+aside div {
+	border: 1px solid #fff;
+}
+
+body {
+	font-family: "avenir", sans-serif;
+}
+
+form {
+	background-color: white;
+}
+
+nav {
+	height: 75px;
+	padding: 15px;
+	position: relative;
+	margin: auto;
+	color: black;
+	vertical-align: middle;
+}
+
+header {
+	margin-top: 12%;
+}
+
+h1 {
+	letter-spacing: .2em;
+}
+
+h1:hover {
+	color: rgb(243, 195, 172);
+}
+
+h4 {
+	color: #999999;
+	font-size: 1em;
+	letter-spacing: 2px;
+	padding: 10px 20px;
+}
+
+h4:after,
+h4:before {
+	content: " ";
+	display: inline-block;
+	max-width: 80px;
+	width: 15%;
+	border-bottom: 1px solid #ddd;
+	line-height: 18px;
+	vertical-align: middle;
+	margin: 0 10px
+}
+
+h5,
+span {
+	font-family: 'Bebas Thin';
+	font-size: 1.6em;
+	text-align: center;
+	background-color: white;
+	color: black;
+	padding: 0 5px;
+	position: relative;
+	top: -25px;
+	right: auto
+}
+
+i {
+	color: gray;
+}
+
+P {
+	margin: 15px 0;
+}
+
+p a {
+	font-style: italic;
+}
+
+.carousel-fade {
+	z-index: 1;
+}
+
+.carfooter {
+	background-color: #FEE6DB;
+	height: 6em;
+	margin-top: -6em;
+	position: relative;
+	z-index: 1000;
+}
+
+.date {
+	font-weight: 100;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.date,
+p a {
+	color: #999999;
+}
+
+.dropdown-menu {
+	text-align: center;
+}
+
+.dropdown-menu li:hover {
+	background-color: rgb(243, 195, 172);
+}
+
+.dropdown-menu li a:hover {
+	background-color: inherit;
+}
+
+.dropdown-menu li {
+	padding: 10px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 1px solid #eee;
+}
+
+.email {
+	margin-top: 2em;
+	padding: 5px;
+	width: 80%;
+}
+
+.follow {
+	margin-top: 40%;
+	text-align: center;
+}
+
+.follow li {
+	display: inline-block;
+}
+
+.follow a {
+	padding: 10px
+}
+
+.follow i {
+	color: black;
+	font-size: 1.3em;
+}
+
+.follow ul {
+	padding: 0;
+}
+
+.follow,
+.subscribe,
+.wishlist,
+.favorites {
+	color: black;
+	border: 1px solid #DDD;
+	letter-spacing: 2px;
+	margin-bottom: 40px;
+	margin-right: 35px;
+	max-width: 300px;
+	padding: 10px;
+}
+
+.headline {
+	text-align: center;
+	font-family: "Bebas", sans-serif;
+}
+
+.headline a:hover {
+	color: rgb(243, 195, 172);
+	text-decoration: none;
+}
+
+.item img {
+	display: inline;
+}
+
+.nav-header {
+	display: inline-block;
+	line-height: 50px;
+	vertical-align: middle;
+	margin-right: 60px;
+}
+
+.more {
+	width: 106px;
+	border: 1px solid #ccc;
+	font-size: 17px;
+	color: #ccc;
+	font-family: "Bebas Thin";
+	padding: 10px 20px;
+	letter-spacing: 3px
+}
+
+.more:hover {
+	background-color: grey;
+	color: white;
+	text-decoration: none;
+	margin-top: 40px;
+}
+
+.preview {
+	text-align: left;
+}
+
+.preview .follow {
+	margin: 5px 0;
+	width: 75%;
+}
+
+.submit {
+	border: none;
+	background: white;
+	height: 26px;
+}
+
+button {
+	width: 15%;
+	color: gray;
+}
+
+input {
+	width: 80%;
+	padding: 5px;
+}
+
+#search {
+	font-style: italic;
+	margin-right: 20px;
+}

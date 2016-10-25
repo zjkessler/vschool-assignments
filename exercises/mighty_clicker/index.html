@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Mighty Clicker</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+
+				<h1 class="text-center">Mighty Clicks!</h1>
+
+				<nav class="nav navbar nav">
+					<button class="center-block btn btn-primary btn-lg"><a href="/#/blue">Go Blue</a></button>
+					<button class="center-block btn btn-danger btn-lg"><a href="/#/red">Go Red</a></button>
+				</nav>
+
+				<ng-view></ng-view>
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js'></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

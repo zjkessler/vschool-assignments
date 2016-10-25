@@ -1,0 +1,62 @@
+@import url(//fonts.googleapis.com/css?family=Rock+Salt);
+body {
+	font-family: 'Rock Salt', cursive;
+	background-image: url("http://wallpapercave.com/wp/RUdmM6d.jpg");
+	background-position: center;
+}
+
+button {
+	margin: 5px;
+}
+
+img {
+	height: 200;
+	width: 200;
+}
+
+input {
+	margin: 5px;
+}
+
+input.ng-invalid.ng-touched {
+	border: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+	border: 1px solid green;
+}
+
+input:checkbox,
+h4 {
+	margin-right: 10px;
+}
+
+.card {
+	height: 150px;
+	padding: 10px;
+	background-image: url("http://i1123.photobucket.com/albums/l543/hercampusphoto/Colgate%20University/blank-index-card.jpg?t=1333252331");
+	background-position: center;
+	background-size: cover;
+	border-radius: 2%;
+	margin-bottom: 20px;
+	box-shadow: 10px 10px 20px;
+}
+
+.completed {
+	text-decoration-color: black;
+	text-decoration: line-through;
+	color: red;
+}
+
+.error {
+	color: red;
+}
+
+.todoLine,
+.check {
+	display: inline-block
+}
+
+.ng-invalid .btn {
+	background-color: gray;
+}

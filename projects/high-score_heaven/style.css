@@ -8,31 +8,29 @@
 		position: relative;
 		left: 0;
 	}
+	h1 {
+		font-size: 1em;
+	}
+}
+
+@media (max-width:500px) {
+	i {
+		visibility: hidden;
+	}
+	.tableContainer {
+		width: 100%;
+	}
+	.center {
+		margin: 0;
+		width: inherit;
+	}
 }
 
 body {
 	background-image: url("photo-1469032923574-4f1413034019.jpg");
 	background-size: cover;
+	background-position: center;
 	text-align: center;
-}
-
-button {
-	font-size: 4em;
-}
-
-button,
-h1,
-i,
-label,
-td {
-	font-family: 'halo';
-	font-size: 2em;
-	font-weight: 600;
-	text-shadow: 0px 0px 20px white;
-}
-
-h1 {
-	font-size: 4em;
 }
 
 header {
@@ -48,12 +46,70 @@ label {
 }
 
 table {
-	width: %;
 	margin: auto;
-	font-size: 1.2em;
 }
 
-#main {
-	width: 800px;
+.main {
+	color: white;
+	position: relative;
+	z-index: 1;
+}
+
+.bg {
+	background: black;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+h1,
+i,
+label,
+td,
+th,
+p {
+	background-color: inherit;
+	font-family: 'halo';
+	font-size: 2em;
+	position: relative;
+	text-shadow: 0px 0px 30px black;
+	z-index: 10;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+input {
+	color: black;
+}
+
+.tableContainer {
+	height: inherit;
+	overflow-y: scroll;
+}
+
+.center {
 	margin: auto;
+	width: 75%;
+}
+
+th {
+	background-color: #3076B1;
+}
+
+tr:nth-child(even) {
+	background-color: darkgrey;
+}
+
+table:hover {
+	color: black;
+}
+
+#time {
+	margin-left: 22px;
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ugly Things</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="myCtrl">
+	<div class="container">
+		<form action="" class="well form-group">
+			<div class="row">
+				<div class="col-sm-4">
+					<input ng-model="img" class="form-control center-block" type="text" placeholder="image-url">
+				</div>
+				<div class="col-sm-4">
+					<input ng-model="title" class="form-control center-block" type="text" placeholder="Title Field">
+				</div>
+				<div class="col-sm-4">
+					<input ng-model="desc" class="form-control center-block" type="text" placeholder="Description">
+				</div>
+				<div class="col-sm-12">
+					<button type="button" class="form-control btn btn-primary center-block" ng-click='infoSubmit()'>Submit</button>
+				</div>
+			</div>
+		</form>
+		<div class="row">
+			<div class="col-sm-4" ng-repeat="item in picArray track by $index">
+				<figure><img ng-src="{{item.img}}" alt="">
+					<figcaption class="text-center">
+						<h3>{{item.title}}</h3></figcaption>
+					<figcaption class="text-center">
+						{{item.desc}}
+					</figcaption>
+				</figure>
+				<button class="btn btn-warning pull-right" ng-click="delete($index)"><i class="glyphicon glyphicon-remove"></i></button>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Badge</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="MyControl">
+
+	<div class="container">
+		<form action="" class='form-group'>
+			<div class="row">
+				<div class="col-sm-6">
+					<input class="form-control" type="text" placeholder="First Name" ng-model="fname">
+					<input class="form-control" type="text" placeholder="Last Name" ng-model="lname">
+					<input class="form-control" type="text" placeholder="Email" ng-model="email">
+				</div>
+				<div class="col-sm-6">
+					<input class="form-control" type="text" placeholder="Place of Birth" ng-model="pob">
+					<input class="form-control" type="number" placeholder="Phone" ng-model="phone">
+					<input class="form-control" type="text" placeholder="Favorite Food" ng-model="FF">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<textarea class="form-control" rows=6 placeholder="Tell us about yourself" ng-model="info"></textarea>
+				</div>
+			</div>
+
+			<button class="btn btn-default center-block" ng-click="submitForm()" ng-disabled="">Submit</button>
+
+		</form>
+		<form action="" class='form-group'>
+			<div class="continer-fluid header">
+				<h4>Badge: </h4>
+				<div class="row" ng-repeat="badge in badgeArray">
+
+					<div class="col-sm-6">
+						<p>First Name: {{badge.fname}}</p>
+						<p>Last Name: {{badge.lname}}</p>
+						<p>E-mail: {{badge.email}}</p>
+					</div>
+					<div class="col-sm-6">
+						<p>Place of Birth: {{badge.pob}}</p>
+						<p>Phone: {{badge.phone}}</p>
+						<p>Favorite Food: {{badge.FF}}</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-12">
+
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>

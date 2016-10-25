@@ -1,0 +1,32 @@
+body {
+	background: url('https://images.unsplash.com/photo-1436505908502-86e4e5a086a9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=db73a3d84dd920785384165bc2738e17') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.navbar {
+	background: inherit;
+	border: none;
+}
+
+.navbar-brand {
+	font-size: 2em;
+}
+
+.navbar-brand,
+.nav {
+	letter-spacing: 10px
+}
+
+.nav {
+	font-size: 1.5em;
+}
+
+.pop {
+	border-radius: 50%;
+	height: 35px;
+}
+
+.well,
+.pop {
+	box-shadow: 0 10px 6px -6px #777;
+}
