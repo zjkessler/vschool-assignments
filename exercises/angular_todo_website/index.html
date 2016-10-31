@@ -35,22 +35,35 @@
 
 				<div class="col-sm-6 col-sm-offset-3" ng-repeat='item in allList track by $index'>
 					<div class="card">
+						<div class="row">
+							<div class="col-sm-1">
+								<input type="checkbox" ng-model="item.completed" class="form-control">
+							</div>
+							<div class="col-sm-11">
+								<h4 ng-class="{'completed': item.completed}" class="todoLine" ng-hide="editing">{{ item.title }}</h4>
+								<input type="text" ng-model="item.title" ng-show="editing">
 
-						<input type="checkbox" ng-model="item.completed" class="form-control">
+								<p ng-show="item.price" ng-class="{'completed': item.completed}" class="todoLine">$ {{ item.price }}</p>
+								<input type="number" ng-model="item.price" ng-show="editing" placeholder="Price">
 
-						<h4 ng-class="{'completed': item.completed}" class="todoLine">{{item.title}}</h4>
+								<p ng-class="{'completed': item.completed}" ng-hide="editing" class="todoLine">{{ item.description }}</p>
+								<input type="text" ng-model="item.description" ng-show="editing" placeholder="Description">
 
-						<p ng-show="item.price" ng-class="{'completed': item.completed}" class="todoLine">${{item.price}}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-10">
+								<img ng-src="{{ item.imgUrl }}">
+							</div>
 
-						<p ng-class="{'completed': item.completed}" class="todoLine">{{item.description}}</p>
+							<div class="col-sm-2">
+								<button ng-click='editing = !editing' class="btn btn-xs btn-primary pull-right"><i class='glyphicon glyphicon-edit'></i></button>
 
-						<img ng-src="{{ item.imgUrl }}">
+								<button ng-show="editing" ng-click='updateTodo(item); !editing' class="btn btn-xs btn-success pull-right"><i class='glyphicon glyphicon-save'></i></button>
 
-						<button ng-click='editing = !editing' class="btn btn-xs btn-primary pull-right"><i class='glyphicon glyphicon-edit'></i></button>
-
-						<button ng-show="editing" ng-click='updateTodo(item_id, $index)' class="btn btn-xs btn-success pull-right"><i class='glyphicon glyphicon-save'></i></button>
-
-						<button ng-hide="editing" ng-click='delete(item, $index)' class="btn btn-xs btn-danger pull-right"><i class='glyphicon glyphicon-trash'></i></button>
+								<button ng-hide="editing" ng-click='delete(item, $index)' class="btn btn-xs btn-danger pull-right"><i class='glyphicon glyphicon-trash'></i></button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

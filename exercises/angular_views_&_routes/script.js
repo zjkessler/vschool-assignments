@@ -1,13 +1,15 @@
 var app = angular.module("myApp", ["ngRoute"]);
 
 app.config(function ($routeProvider) {
-	$routeProvider.when("/", {
-		templateUrl: "templates/add.html",
-		controller: "myCtrl1"
-	}).when("/multiply", {
-		templateUrl: "templates/mult.html",
-		controller: "myCtrl2"
-	})
+	$routeProvider
+		.when("/", {
+			templateUrl: "templates/add.html",
+			controller: "myCtrl1"
+		})
+		.when("/multiply", {
+			templateUrl: "templates/mult.html",
+			controller: "myCtrl2"
+		})
 })
 
 app.service("NumberService", function () {

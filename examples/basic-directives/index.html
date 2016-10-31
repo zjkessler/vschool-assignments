@@ -1,0 +1,29 @@
+<html>
+
+<head>
+	<link href="public/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="public/vendor/bootstrap-theme.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="battleArena">
+	<div class="bg-warning">
+		<h4><a href="/#/dashboard">Dashboard</a></h4>
+		<h4><a href="/#/leaderboard">Leaderboard</a></h4>
+	</div>
+
+	<ng-view></ng-view>
+
+	<!-- VENDOR -->
+	<script src="public/vendor/angular.min.js"></script>
+	<script src="public/vendor/angular-route.min.js"></script>
+	<script src="public/vendor/jquery-2.1.4.min.js"></script>
+
+	<!-- CUSTOM -->
+	<script src="main.js"></script>
+	<script src="public/views/directives/directives.js"></script>
+	<script src="public/views/leaderboard/leaderboard.js"></script>
+	<script src="public/views/dashboard/dashboard.js"></script>
+
+</body>
+
+</html>

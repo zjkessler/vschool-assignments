@@ -89,7 +89,7 @@ span {
 	padding: 0 5px;
 	position: relative;
 	top: -25px;
-	right: auto
+	right: auto;
 }
 
 i {
@@ -104,6 +104,11 @@ p a {
 	font-style: italic;
 }
 
+.carousel-control.left,
+.carousel-control.right {
+	background-image: none
+}
+
 .carousel-fade {
 	z-index: 1;
 }
@@ -114,6 +119,21 @@ p a {
 	margin-top: -6em;
 	position: relative;
 	z-index: 1000;
+}
+
+.comments {
+	font-family: "avenir";
+	font-size: 1em;
+}
+
+.comments a {
+	font-style: italic;
+	font-weight: 600;
+	font-size: 1.1em;
+}
+
+.comments a:hover {
+	color: rgb(243, 195, 172);
 }
 
 .date {
@@ -152,6 +172,10 @@ p a {
 	width: 80%;
 }
 
+.form-control-feedback {
+	right: 10px;
+}
+
 .follow {
 	margin-top: 40%;
 	text-align: center;
@@ -162,12 +186,16 @@ p a {
 }
 
 .follow a {
-	padding: 10px
+	padding: 10px;
 }
 
 .follow i {
 	color: black;
 	font-size: 1.3em;
+}
+
+.follow i:hover {
+	color: rgb(243, 195, 172);
 }
 
 .follow ul {
@@ -187,6 +215,10 @@ p a {
 	padding: 10px;
 }
 
+.favorites a>img {
+	width: 100%;
+}
+
 .headline {
 	text-align: center;
 	font-family: "Bebas", sans-serif;
@@ -197,59 +229,130 @@ p a {
 	text-decoration: none;
 }
 
+.insta {
+	font-family: 'Bebas Thin';
+	text-align: center;
+	letter-spacing: .1em;
+}
+
+.insta-contain {
+	float: left;
+	width: 10%;
+	height: 125px;
+	position: relative;
+	overflow: hidden;
+	margin: -5px;
+}
+
+.insta-contain img {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-position: center;
+	background-size: cover;
+	background-image: url(https://scontent.cdninstagram.com/t51.2885-15/e35/p320x320/14717581_550392475163839_5793526242212839424_n.jpg?ig_cache_key=MTM2OTI4MTA0MzE2NTAxNDAxMw%3D%3D.2);
+}
+
+
+}
+.insta h2 {
+	font-size: .8em;
+	font-weight: bold;
+}
+
+}
 .item img {
 	display: inline;
 }
-
 .nav-header {
 	display: inline-block;
 	line-height: 50px;
 	vertical-align: middle;
 	margin-right: 60px;
 }
-
 .more {
+	display: block;
+	margin: 40px auto 0;
 	width: 106px;
 	border: 1px solid #ccc;
 	font-size: 17px;
 	color: #ccc;
 	font-family: "Bebas Thin";
-	padding: 10px 20px;
-	letter-spacing: 3px
+	padding: 10px 5px;
+	letter-spacing: 2px;
+	text-align: center;
+	transition: background-color .2s;
+	font-weight: 600;
 }
-
 .more:hover {
 	background-color: grey;
 	color: white;
 	text-decoration: none;
-	margin-top: 40px;
 }
-
 .preview {
 	text-align: left;
 }
-
 .preview .follow {
 	margin: 5px 0;
 	width: 75%;
 }
-
+.post footer {
+	margin-top: 50px;
+	height: 1px;
+}
+.post .share i {
+	color: rgb(243,
+	195,
+	172);
+	font-size: 1.7em;
+	padding-right: 30px;
+}
+.post .related {
+	border-top: 1px solid #c1c1c1;
+	border-bottom: 1px solid #c1c1c1;
+	text-align: center;
+	margin: 42px 0;
+}
+.related h3 {
+	font-family: 'Bebas Thin';
+	background-color: #fff;
+	margin: -11px auto 0px !important;
+	font-size: 24px !important;
+	padding: 0 5px !important;
+	font-weight: normal !important;
+	width: 85px;
+	letter-spacing: .1em;
+}
+.related img {
+	height: auto;
+	padding: 0 10px 10px 10px;
+	width: 24.5%;
+}
+.share {
+	text-decoration: none;
+}
 .submit {
 	border: none;
 	background: white;
 	height: 26px;
 }
-
 button {
 	width: 15%;
 	color: gray;
 }
-
 input {
 	width: 80%;
 	padding: 5px;
 }
-
+#myCarousel ol {
+	list-style: none;
+	background-color: inherit;
+}
 #search {
 	font-style: italic;
 	margin-right: 20px;

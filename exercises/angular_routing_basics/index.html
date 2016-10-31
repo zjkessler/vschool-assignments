@@ -13,9 +13,9 @@
 		<div class="container-fluid">
 			<div class="navbar-header"><a href="/#/home" class="navbar-brand">Oregon</a></div>
 			<ul class="pull-right nav navbar-nav">
-				<li><a href="/#/home">Home</a></li>
-				<li><a href="/#/about">About</a></li>
-				<li><a href="/#/love">Why I Love It</a></li>
+				<li><a href="#/templates/home.html">Home</a></li>
+				<li><a href="#/templates/about.html">About</a></li>
+				<li><a href="#/templates/love.html">Why I Love It</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -23,7 +23,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1">
-				<ng-view></ng-view>
+				<div ng-view></div>
 			</div>
 		</div>
 	</div>
@@ -33,6 +33,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
 	<script src="script.js"></script>
+	<script src="templates/about.js"></script>
+	<script src="templates/home.js"></script>
+	<script src="templates/love.js"></script>
 </body>
 
 </html>

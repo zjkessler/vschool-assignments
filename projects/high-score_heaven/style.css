@@ -27,9 +27,7 @@
 }
 
 body {
-	background-image: url("photo-1469032923574-4f1413034019.jpg");
-	background-size: cover;
-	background-position: center;
+	background: url("photo-1469032923574-4f1413034019.jpg") no-repeat center center fixed;
 	text-align: center;
 }
 
