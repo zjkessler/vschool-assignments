@@ -1,6 +1,6 @@
-var app = angular.module("myApp", ['ngRoute'])
+var app = angular.module("myApp", ['ngRoute']);
 
-app.config("$routeProvider", [function ($routeProvider) {
+app.config(["$routeProvider", function ($routeProvider) {
 	$routeProvider
 		.when('/', {
 			controller: 'homeCtrl',
@@ -15,6 +15,6 @@ app.config("$routeProvider", [function ($routeProvider) {
 			templateUrl: 'templates/love.html'
 		})
 		.otherwise({
-			redirectTo: '/home'
+			redirectTo: '/'
 		})
 }]);

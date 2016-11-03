@@ -12,6 +12,23 @@ body {
 	font-size: 2em;
 }
 
+.navbar-default .navbar-brand {
+	color: aliceblue;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: yellow;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: aliceblue;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+	color: yellow;
+}
+
 .navbar-brand,
 .nav {
 	letter-spacing: 10px
