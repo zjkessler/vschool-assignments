@@ -4,20 +4,6 @@ var cor2 = '';
 var grid = require("./grid")
 var hits = 0;
 
-function printGrid(grid) {
-	//	var boardGrid = [];
-	for (var i = 0; i < grid.length; i++) {
-		//		var j = 0;
-		//		console.log(grid[i][j].display);
-		//	}
-		//	console.log(boardGrid);
-		//
-
-//
-		console.log(grid[i][0].display + " " + grid[i][1].display + " " + grid[i][3].display + " " + grid[i][4].display + " " + grid[i][5].display + " " + grid[i][6].display + " " + grid[i][7].display + " " + grid[i][8].display + " " + grid[i][9].display + " " + grid[i][10].display);
-	}
-}
-printGrid(grid);
 
 function hitOrMiss() {
 

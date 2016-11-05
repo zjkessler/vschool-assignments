@@ -20,13 +20,35 @@
 //Don’t be too worried by the anticipated complexity of this problem, this grid could be written in about 12 lines of code!
 var location = require("./location");
 
-var grid = [];
-for (var i = 0; i < 9; i++) {
-	grid.push([]);
-	for (var j = 0; j <= 9; j++) {
-		grid[i][j] = location;
-	}
-}
-console.log(grid);
+function makeBoard() {
+	var finalBoard = [];
+	for (var i = 0; i < 10; i++) {
+		var row = [];
+		for (var j = 0; j <= 10; j++) {
 
-module.exports = grid;
+			row.push(location)
+
+		}
+		finalBoard.push(row);
+	}
+	console.log(finalBoard);
+	return finalBoard;
+}
+
+function displayBoard(board) {
+	var displayedBoard = [];
+	for (var i = 0; i < 10; i++) {
+		var row = "";
+		for (var j = 0; j <= 10; j++) {
+			row += board[i][j].display + "  ";
+		}
+		row += "/n"
+		displayedBoard += row;
+	}
+	console.log(displayedBoard);
+}
+
+module.exports = {
+	makeBoard: makeBoard,
+	displayBoard: displayBoard
+}

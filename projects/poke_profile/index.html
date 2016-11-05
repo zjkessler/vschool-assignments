@@ -9,12 +9,29 @@
 </head>
 
 <body ng-controller="myCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-offset-4 col-sm-4 textcenter">
+				<h1>Enter Pokemon Number: </h1>
+				<form action="">
+					<input type="number" placeholder="Enter Pokemon Number">
+					<button type="button" ng-click="getPokemon(pokeNum)"></button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-offset-4 col-sm-4" <h2>Pokemon: </h2>
+				<h2>{{}}</h2>
+				<h3>Ability: </h3>
+				<h3>{{}}</h3>
+				<img ng-src="{{  }}" alt=""> >
 
-	<h1>Enter Pokemon Number: </h1>
-	<form action="">
-		<input type="number" placeholder="Enter Pokemon Number" >
-		<button type="button" ng-click="getPokemon(pokeNum)"></button>
-	</form>
+
+			</div>
+		</div>
+	</div>
+
+
 
 
 
