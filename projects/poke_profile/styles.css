@@ -1,0 +1,13 @@
+@font-face {
+	font-family: "pocketMonk";
+	src: url(Pocket_Monk.otf);
+}
+
+body {
+	font-family: pocketMonk;
+	background: url(http://cdn.wallpapersafari.com/55/44/tvlMso.jpg) no-repeat center center fixed;
+}
+
+button {
+	font-family: helvetica;
+}

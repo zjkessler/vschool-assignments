@@ -9,22 +9,25 @@
 </head>
 
 <body ng-controller="myCtrl">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-offset-4 col-sm-4 textcenter">
+			<div class="col-sm-offset-4 col-sm-4 text-center">
 				<h1>Enter Pokemon Number: </h1>
 				<form action="">
-					<input type="number" placeholder="Enter Pokemon Number">
-					<button type="button" ng-click="getPokemon(pokeNum)"></button>
+					<input type="number" placeholder="Enter Pokemon Number" ng-model=pokeNum>
+					<button class="btn btn-warning" type="button" ng-click="getPokemon(pokeNum)">Get That Pokemon</button>
 				</form>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-offset-4 col-sm-4" <h2>Pokemon: </h2>
-				<h2>{{}}</h2>
+
+			<div class="col-sm-offset-4 col-sm-4 text-center">
+
+				<h3>Pokemon: </h3>
+				<h2>{{ pokemon.name }}</h2>
 				<h3>Ability: </h3>
-				<h3>{{}}</h3>
-				<img ng-src="{{  }}" alt=""> >
+				<h2>{{ pokemon.ability }}</h2>
+				<img ng-src="{{ pokemon.image }}" alt="">
 
 
 			</div>
@@ -37,6 +40,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 	<script src="app.js"></script>
 </body>
 

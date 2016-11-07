@@ -1,0 +1,17 @@
+{
+  "name": "original_bounty_hunter",
+  "version": "1.0.0",
+  "description": "The Original Bounty Hunter 14 MAY 2015 on Exercise, Web Applications, Level 3, Project You are a bounty hunter of the Old Republic. Your parents were killed by a Sith Lord as a child and your goal in life is to kill all the Sith and Jedi.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "uuid": "^2.0.3"
+  }
+}
