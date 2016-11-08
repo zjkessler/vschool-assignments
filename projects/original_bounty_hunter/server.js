@@ -14,10 +14,35 @@ var Bounty = function (fname, lname, living, bountyAmount, type) {
 	this.type = type;
 }
 
-var bounties = []
+var bounties = [
+	{
+		firstName: "Boba",
+		lastName: "Fett",
+		living: true,
+		bountyAmount: 20000,
+		type: "Sith",
+		id: uuid.v4()
+	},
+	{
+		firstName: "Jango",
+		lastName: "Fett",
+		living: false,
+		bountyAmount: 10000,
+		type: "Sith",
+		id: uuid.v4()
+	},
+	{
+		firstName: "Obi-Wan",
+		lastName: "Kenobi",
+		living: true,
+		bountyAmount: 100000,
+		type: "Jedi",
+		id: uuid.v4()
+	},
+]
 
 app.listen(8000, function () {
-	console.log("Listeing on Port 8000...");
+	console.log("Listening on Port 8000...");
 })
 
 
@@ -29,19 +54,33 @@ app.get("/bounties", function (req, res) {
 
 app.post("/bounties", function (req, res) {
 
-	bounties.push(req.body);
-	res.send(req.body);
+	var bounty = req.body;
+	bounty.id = uuid.v4();
+	bounties.push(bounty);
+	res.send(bounties);
 
 });
 
-app.put("/bounties/:id", function (req, res) {
+app.put("/bounties/:bountyId", function (req, res) {
+	bounties.forEach(function (bounty, index) {
 
-	res.send(bounties)
-
+		if (req.params.bountyId === bounty.id) {
+			bounties[index] = req.body;
+			console.log(bounties[index])
+			res.send(bounties);
+		}
+	})
 });
 
 app.delete("/bounties/:id", function (req, res) {
 
-	res.send(bounties)
+	bounties.forEach(function (bounty, index) {
+
+		if (req.params.id === bounty.id) {
+
+			bounties.splice(index, 1);
+			res.send(bounties);
+		}
+	})
 
 });
