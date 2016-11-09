@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Bounties</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 col-sm-offset-1">
+				<h1>Galactic Bounties</h1>
+				<form action="" class="form-group">
+					<div>
+						<input type="text" class="form-control" placeholder="First Name">
+					</div>
+					<div>
+						<input type="text" class="form-control" placeholder="Last Name">
+					</div>
+					<div>
+						<input type="text" class="form-control" placeholder="Alive?">
+					</div>
+					<div>
+						<input type="number" class="form-control" placeholder="Bounty Amount">
+					</div>
+					<div>
+						<input type="text" class="form-control" placeholder="Afilliation? Sith or Jedi">
+					</div>
+					<button class="btn btn-primary btn-lg" ng-click="postBounty()">Add Bounty</button>
+				</form>
+			</div>
+			f
+			<div class="col-sm-3 col-sm-offset-2" ng-repeat="bounty in bounties track by $index">
+
+				<h3>{{ bounty.firstName}} {{bounty.lastName }}</h3>
+				<button class="pull-right btn btn-danger btn-xs" ng-click="deleteBounty(bounty.id)"><span class="glyphicon glyphicon-trash"></span></button>
+				<h4>Alive: {{ bounty.living }}</h4>
+				<h4>Bounty: ${{ bounty.bountyAmount }}</h4>
+				<h4>Affiliation: {{ bounty.type }}</h4>
+				<h4>{{ bounty.id }}</h4>
+
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<script src="app.js"></script>
+	<script src="service.js"></script>
+</body>
+
+</html>
