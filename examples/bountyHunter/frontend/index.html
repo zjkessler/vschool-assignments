@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BountyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="MainController">
+    <div>
+        <h3>Add New Bounty</h3>
+        <p><label>First Name</label><input type="text" placeholder="First Name" ng-model="newBounty.firstName"></p>
+        <p><label>Last Name</label><input type="text" placeholder="Last Name" ng-model="newBounty.lastName"></p>
+        <p><label>Living?</label><input type="checkbox" ng-model="newBounty.living" /></p>
+        <p><label>Value</label><input type="number" ng-model="newBounty.amount" placeholder="Value" /></p>
+        <p><label>Type</label><input type="text" ng-model="newBounty.type" placeholder="Type" /></p>
+        <button ng-click="addNewBounty()">Add Bounty</button>
+        <hr>
+        <h1>{{newBounty}}</h1>
+    </div>
+    <div ng-repeat="item in bounties track by $index" ng-init="item.isBeingEdited = false">
+        <span ng-if="!item.isBeingEdited"> 
+            <button ng-click="item.isBeingEdited = !item.isBeingEdited">Edit</button>
+            <p ng-show="item.firstName">First Name: {{item.firstName}}</p>
+            <p ng-show="item.lastName">Last Name: {{item.lastName}}</p>
+            <p ng-show="item.living">Living: {{item.living}}</p>
+            <p ng-show="item.amount">Value: {{item.amount}}</p>
+            <p ng-show="item.type">Type: {{item.type}}</p>
+            <button ng-click="deleteBounty(item.id, $index)">Captured</button>
+            <hr />
+        </span>
+        <span ng-if="item.isBeingEdited"> 
+            <button ng-click="updateBounty(item, $index)">Update</button>
+            <p>First Name: <input type="text" ng-model="item.firstName"></p>
+            <p>Last Name: <input type="text" ng-model="item.lastName"></p>
+            <p>Living: <input type="checkbox" ng-model="item.living"></p>
+            <p>Value: <input type="number" ng-model="item.amount"></p>
+            <p>Type: <input type="text" ng-model="item.type"></p>
+            <hr />
+        </span>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

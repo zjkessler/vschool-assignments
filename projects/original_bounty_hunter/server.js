@@ -4,10 +4,13 @@ var app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
-var cors = require("cors");
-app.use(cors());
+//var cors = require("cors");
+//app.use(cors());
 
 var uuid = require("uuid");
+var port = 9000;
+
+app.use(express.static("public"));
 
 
 var bounties = [
@@ -17,7 +20,7 @@ var bounties = [
 		living: true,
 		bountyAmount: 20000,
 		type: "Sith",
-		id: "1"
+		_id: "1"
 	},
 	{
 		firstName: "Jango",
@@ -25,7 +28,7 @@ var bounties = [
 		living: false,
 		bountyAmount: 10000,
 		type: "Sith",
-		id: "2"
+		_id: "2"
 	},
 	{
 		firstName: "Obi-Wan",
@@ -33,12 +36,12 @@ var bounties = [
 		living: true,
 		bountyAmount: 100000,
 		type: "Jedi",
-		id: "3"
+		_id: "3"
 	},
 ]
 
-app.listen(8000, function () {
-	console.log("Listening on Port 8000...");
+app.listen(port, function () {
+	console.log(`Listening on Port ${port}...`);
 })
 
 
@@ -58,13 +61,13 @@ app.post("/bounties", function (req, res) {
 });
 
 app.put("/bounties/:bountyId", function (req, res) {
-
+	console.log(req.body);
 	bounties.forEach(function (bounty, index) {
 
-		if (req.params.bountyId === bounty.id) {
+		if (req.params.bountyId === bounty._id) {
 			bounties[index] = req.body;
 			console.log(bounties[index])
-			return res.send(bounties);
+			return res.send(bounties[index]);
 		}
 	})
 });

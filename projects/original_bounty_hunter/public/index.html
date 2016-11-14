@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Bounties</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5 col-sm-offset-1">
+				<h1>Galactic Bounties</h1>
+				<form action="" class="form-group">
+					<div>
+						<input type="text" class="form-control" placeholder="First Name" ng-model="newBounty.firstName">
+					</div>
+					<div>
+						<input type="text" class="form-control" placeholder="Last Name" ng-model="newBounty.lastName">
+					</div>
+					<div>
+						<label>Alive?</label>
+						<input type="checkbox" class="form-control" placeholder="Alive?" ng-model="newBounty.living">
+					</div>
+					<div>
+						<input type="number" class="form-control" placeholder="Bounty Amount" ng-model="newBounty.bountyAmount">
+					</div>
+					<div>
+						<input type="text" class="form-control" placeholder="Afilliation? Sith or Jedi" ng-model="newBounty.type">
+					</div>
+					<button class="btn btn-primary btn-lg" ng-click="addBounty()">Add Bounty</button>
+				</form>
+			</div>
+
+			<div class="col-sm-3 col-sm-offset-2" ng-repeat="item in bounties track by $index" ng-init="item.editing = false">
+
+
+
+				<button class="pull-right btn btn-warning btn-xs" ng-click="item.editing = !item.editing"><span class="">Edit</span></button>
+
+				<span ng-if="!item.editing">
+				
+				<button class="pull-right btn btn-danger btn-xs" ng-click="deleteBounty(item._id, $index)"><span class="glyphicon glyphicon-trash"></span></button>
+
+				<h3>{{ item.firstName }} {{ item.lastName }}</h3>
+				<h4>Alive: {{ item.living }}</h4>
+				<h4>item: ${{ item.bountyAmount }}</h4>
+				<h4>Affiliation: {{ item.type }}</h4>
+				<h4>{{ item.id }}</h4></span>
+				</span>
+				<span ng-if="item.editing"><button class="pull-right btn btn-primary btn-xs" ng-click="editBounty(item, $index)" ><span class="">Save</span></button>
+				<p>First Name:
+					<input type="text" ng-model="item.firstName">
+				</p>
+				<p>Last Name:
+					<input type="text" ng-model="item.lastName">
+				</p>
+				<p>Alive?
+					<input type="checkbox" ng-model="item.living">
+				</p>
+				<p>Bounty Amount:
+					<input type="text" ng-model="item.bountyAmount">
+				</p>
+				<p>Affiliation:
+					<input type="text" ng-model="item.type">
+				</p>
+				</span>
+
+
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<script src="app.js"></script>
+	<script src="service.js"></script>
+</body>
+
+</html>

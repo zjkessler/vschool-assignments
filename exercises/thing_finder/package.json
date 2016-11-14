@@ -1,0 +1,18 @@
+{
+  "name": "thing_finder",
+  "version": "1.0.0",
+  "description": "Choose a thing/noun of any kind, then write an express server with a GET route that sends back an array of that thing.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0"
+  }
+}
