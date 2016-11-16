@@ -2,6 +2,7 @@ var app = angular.module("myApp");
 
 
 app.service("PostService", ["$http", function ($http) {
+
 	//get request for POSTS 
 	this.getAllPosts = function () {
 		return $http.get("/posts")
@@ -29,16 +30,17 @@ app.service("PostService", ["$http", function ($http) {
 			})
 	}
 
-
 	//delete request for POSTS 
 	this.delete = function (postId) {
-		return $http.delete("/posts/" + postId)
-			.then(function (response) {
-				return response.data;
-			});
-	}
-	this.deleteComment = function (commentId, postId) {
-		return $http.delete("/posts/" + postId + "/comments/" + commentId)
+			return $http.delete("/posts/" + postId)
+				.then(function (response) {
+					return response.data;
+				});
+		}
+		//delete request for Comments
+	this.deleteComment = function (commentToDelete, post) {
+
+		return $http.delete("/posts/" + post._id + "/comments/" + commentToDelete._id)
 			.then(function (response) {
 				return response.data;
 
@@ -56,7 +58,5 @@ app.service("PostService", ["$http", function ($http) {
 				console.log(updatedObject.data);
 				return updatedObject.data;
 			})
-
-
 	}
-			}]);
+	}]);

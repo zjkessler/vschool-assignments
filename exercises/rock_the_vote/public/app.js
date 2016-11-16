@@ -50,16 +50,16 @@ app.controller("myCtrl", ["$scope", "PostService", function ($scope, PostService
 			})
 	};
 
-	$scope.deleteComment = function (deletedComment, $index) {
-
-		PostService.deleteComment(deletedComment._id)
+	$scope.deleteComment = function (deletedComment, post, index) {
+		PostService.deleteComment(deletedComment, post)
 			.then(function (response) {
+				$scope.posts.splice(index, 1);
 				return response.data;
 			})
-		PostService.getAllPosts()
-			.then(function (response) {
-				$scope.posts = response;
-			})
+//		PostService.getAllPosts()
+	//			.then(function (response) {
+	//				$scope.posts = response;
+	//			})
 	}
 
 

@@ -51,6 +51,26 @@ postRouter.delete("/:postId", function (req, res) {
 	})
 })
 
+postRouter.delete("/:postId/comments/:commentId", function (req, res) {
+	console.log(req.params.commentId);
+	console.log(req.params.postId);
+	Posts.findById(req.params.postId, function (err, post) {
+		if (err) {
+			res.status(500).send(err);
+		} else {
+			console.log("here")
+			var doc = post.comments.id(req.params.commentId).remove();
+			post.save(function (err) {
+				if (err) {
+					return res.status(500).send(err)
+				} else {
+					res.send(post)
+				}
+			})
+		}
+	})
+})
+
 postRouter.put("/:postId/comments", function (req, res) {
 
 	Posts.findById(req.params.postId, function (err, newPost) {
