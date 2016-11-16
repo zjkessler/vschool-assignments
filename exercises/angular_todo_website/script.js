@@ -11,7 +11,8 @@ app.controller('myCtrl', ['$scope', '$http', function ($scope, $http) {
 
 	$scope.addTodo = function (todo) {
 
-		$http.post('http://api.vschool.io/zjk/todo', todo).then(function (response) {
+		$http.post('http://api.vschool.io/zjk/todo', todo)
+		.then(function (response) {
 			$scope.todo = response.data;
 			console.log(todo);
 		}, function (error) {
@@ -20,8 +21,7 @@ app.controller('myCtrl', ['$scope', '$http', function ($scope, $http) {
 	};
 
 	$scope.delete = function (todoToDelete, index) {
-
-		$http.delete('http://api.vschool.io/zjk/todo/' + todoToDelete._id)
+$http.delete('http://api.vschool.io/zjk/todo/' + todoToDelete._id)
 			.then(function (response) {
 				response.data;
 				$scope.allList.splice(index, 1);

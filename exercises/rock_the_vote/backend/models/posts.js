@@ -10,8 +10,14 @@ var mongoose = require("mongoose");
 var postSchema = new mongoose.Schema({
 	title: String,
 	description: String,
-	upVote: number,
-	downVote: number,
+	upVote: {
+		type: Number,
+		default: 0,
+	},
+	downVote: {
+		type: Number,
+		default: 0,
+	},
 	comments: [{
 		comment: String
 	}]

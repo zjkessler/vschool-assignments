@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Rock The Vote</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="myCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<div>
+
+				</div>
+				<div class="panel panel-default" ng-repeat="item in posts| orderBy: '-upVote' track by $index" ng-init="item.editing = false">
+
+					<span class=""><button class="btn btn-success btn-xs"  ng-click="addVote(item, $index)">up vote:</button> {{ item.upVote }}</span>
+
+					<span class=""><button class="btn btn-danger btn-xs" ng-click="minusVote(item, $index)">down vote:</button> {{ item.downVote }}</span>
+
+					<div>
+
+						<h3 class="panel-heading" ng-if="!item.editing">{{ item.title }}</h3>
+
+						<input type="text" placeholder="update Title" ng-model="item.title" ng-if="item.editing">
+					</div>
+
+					<div>
+						<p class="panel-body" ng-if="!item.editing">{{ item.description }}</p>
+
+						<textarea name="" id="" cols="30" rows="5" ng-model="item.description" ng-if="item.editing">updated description..</textarea>
+					</div>
+
+					<div>
+						<button class="btn btn-warning btn-xs" ng-click="item.editing = !item.editing">Edit</button>
+
+						<button class="btn btn-primary btn-xs" ng-if="item.editing" ng-click="editPost(item, $index)">Save</button>
+
+						<button class="btn btn-danger btn-xs" ng-if="!item.editing" ng-click="deletePost(item, $index)">Delete</button>
+
+						<span class="pull-right"><p>Total Votes:{{ item.upVote + item.downVote}} </p></span>
+					</div>
+
+					<div class="well">
+
+						<h5>Comments: </h5>
+						<ul id="commentList" ng-repeat="comment in item.comments">
+							<li>{{ comment.comment }}
+								<button class="btn btn-danger btn-xs pull-right" ng-click="deleteComment(comment, item, $index)">delete</button>
+							</li>
+							<li ng-show="addNewComment" }>{{ addNewComment }}</li>
+						</ul>
+					</div>
+					<form class="form-group">
+						<textarea class="form-control" id="commentArea" cols="30" rows="2" ng-model="item.newComment" placeholder="tell us your thoughts...">tell us your thoughts...</textarea>
+						<span><button type="submit" class="btn btn-primary btn-xs" ng-click="addComment(item.newComment, item, $index)">+</button></span>
+					</form>
+
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<form action="" class="form-group well">
+					<h3>Add New Issue</h3>
+					<div>
+						<input class="form-control" ng-model="newPost.title" type="text" placeholder="Title" required>
+					</div>
+
+					<div>
+						<textarea class="form-control" ng-model="newPost.description" name="description" id="" cols="30" rows="10" placeholder="Enter Issue Description here..."></textarea>
+					</div>
+					<div>
+						<button class="btn btn-primary pull-right" ng-click=addPost(newPost)>Add Issue</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+		<script src="app.js"></script>
+		<script src="services/postService.js"></script>
+</body>
+
+</html>
