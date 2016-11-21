@@ -1,0 +1,1 @@
+Write a program that finds the sum of all the even squares from 1 to _n_
