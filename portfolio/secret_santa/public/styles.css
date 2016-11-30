@@ -1,0 +1,32 @@
+	@font-face {
+		font-family: "ChristmasFont";
+		src: url("misc/MountainsofChristmas.ttf");
+	}
+	
+	body {
+		background: url(misc/pudpybtoqae-sebastian-spindler.jpg) no-repeat center center fixed;
+	}
+	
+	h1,
+	h3 {
+		color: red;
+		font-size: 1.8em
+	}
+	
+	.navbar {
+		background-color: green;
+	}
+	
+	h1,
+	h3,
+	.navbar,
+	.jumbotron {
+		font-family: ChristmasFont;
+	}
+	
+	.navbar-default .navbar-brand,
+	.navbar-default .navbar-nav > li > a,
+	.jumbotron {
+		color: #f50202;
+		font-size: 1.3em;
+	}

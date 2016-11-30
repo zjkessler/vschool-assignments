@@ -1,0 +1,79 @@
+<div class="row">
+
+	<div class="col-md-4 col-md-offset-4">
+
+		<form class="well form-group" ng-if="!Santa.length">
+			<h3>Please add your info:</h3>
+			<input type="text" class="form-control" ng-model="newPerson.firstName" placeholder="First Name">
+			<input type="text" class="form-control" ng-model="newPerson.lastName" placeholder="Last Name">
+			<input type="text" class="form-control" ng-model="newPerson.email" placeholder="Email">
+			<input type="text" class="form-control" ng-model="newPerson.address.StreetName1" placeholder="Address Line 1">
+			<input type="text" class="form-control" ng-model="newPerson.address.StreetName2" placeholder="Address Line 2 (optional)">
+			<input type="text" class="form-control" ng-model="newPerson.address.unitNum" placeholder="Unit # (optional)">
+			<input type="text" class="form-control" ng-model="newPerson.address.city" placeholder="City">
+			<input type="text" class="form-control" ng-model="newPerson.address.state" placeholder="State">
+			<input type=" text " class="form-control " ng-model="newPerson.address.zip " placeholder="Zip ">
+			<input type="text " class="form-control " ng-model="newPerson.address.country " placeholder="USA ">
+			<button class="form-control btn btn-success " ng-click="addPerson(newPerson)">Add info</button>
+
+		</form>
+
+		<div class="" ng-repeat="person in Santa track by $index" ng-init="person.editing = false">
+			<div>
+
+				<div class="well">
+					<h3 class="text-center">Your Secret Santa:</h3>
+					<p>{{person.assignedTo}}</p>
+				</div>
+
+				<div class="well">
+					<div ng-if="!person.editing">
+						<h3 class="text-center">Your Info:</h3>
+						<p>{{ person.firstName +" " + person.lastName }}</p>
+						<p>{{ person.email }}</p>
+						<p>{{ person.address.StreetName1 }}</p>
+						<p ng-show="if(person.address.StreetName2)">{{ person.address.StreetName2 }}</p>
+						<p ng-show="if(person.address.unitNum)">{{ person.address.unitNum }}</p>
+						<p>{{ person.address.city }}</p>
+						<p>{{ person.address.state }}</p>
+						<p>{{ person.address.zip }}</p>
+						<p>{{ person.address.country }}</p>
+					</div>
+
+					<div class="" ng-if="person.editing">
+						<form class="form-group" action="">
+							<h3>Please edit your info:  </h3>
+							<label for="">First Name</label>
+							<input type="text" class="form-control" ng-model="person.firstName" placeholder="{{person.firstName}}">
+							<label for="">Last Name</label>
+
+							<input type="text" class="form-control" ng-model="person.lastName" placeholder="{{person.lastName}}">
+							<label for="">Email Name</label>
+
+							<input type="text" class="form-control" ng-model="person.email" placeholder="{{person.email}}">
+							<label for="">Address</label>
+							<input type="text" class="form-control" ng-model="person.StreetName1" placeholder="{{person.address.StreetName1}}">
+							<label for="">Address (optional)</label>
+							<input type="text" class="form-control" ng-model="person.StreetName2" placeholder="{{person.address.StreetName2}}">
+							<label for="">Unit # (optional)</label>
+							<input type="text" class="form-control" ng-model="person.unitNum" placeholder="{{person.address.unitNum}}">
+							<label for="">City</label>
+							<input type="text" class="form-control" ng-model="person.city" placeholder="{{person.address.city}}">
+							<label for="">State</label>
+							<input type="text" class="form-control" ng-model="person.state" placeholder="{{person.address.state}}">
+							<label for="">Zip</label>
+							<input type="text" class="form-control" ng-model="person.zip" placeholder="{{person.address.zip}}">
+							<label for="">Country</label>
+							<input type="text" class="form-control" ng-model="person.country" placeholder="{{person.address.country}}">
+						</form>
+					</div>
+
+					<div>
+						<button class="btn btn-warning" ng-click="person.editing = !person.editing">Edit Info</button>
+						<button ng-show="person.editing" class="btn btn-primary" ng-click="editPerson(person,$index)">Save Info</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
